@@ -1,0 +1,506 @@
+@font-face
+{
+    font-family: 'quicksand-light_italic';
+    src: url('../fonts/quicksand/Quicksand-LightItalic.otf');
+}
+
+@font-face
+{
+    font-family: 'quicksand-bold_italic';
+    src: url('../fonts/quicksand/Quicksand-BoldItalic.otf');
+}
+
+@font-face
+{
+    font-family: 'quicksand-light';
+    src: url('../fonts/quicksand/Quicksand-Light.otf');
+}
+
+@font-face
+{
+    font-family: 'quicksand-bold';
+    src: url('../fonts/quicksand/Quicksand-Bold.otf');
+}
+
+@font-face
+{
+    font-family: 'bellota-light';
+    src: url('../fonts/bellota/Bellota-Light.otf');
+}
+
+@font-face
+{
+    font-family: 'bellota-bold-italic';
+    src: url('../fonts/bellota/Bellota-BoldItalic.otf');
+}
+
+body
+{
+    line-height: 18px;
+    font-family: 'quicksand-bold';
+    color: #5e6975;
+    background-color: #f3efef;
+}
+
+a
+{
+    color: #4f8fd3;
+    text-decoration: none;
+}
+
+hr 
+{
+    height:0; 
+    border:0; 
+    border-top:1px solid #e4e4e4; 
+}
+
+.top_bar
+{
+    width: 100%;
+    min-width: 950px;
+    height: 45px;
+    background-color: #4aa3e4;
+    border-bottom: 5px solid #2f8cca;
+    margin: 0 0 10px 0;
+    display: inline-flex;
+    border-radius: 5px;
+    position: fixed;
+    z-index: 10;
+}
+
+.logo a
+{
+    font-family: 'bellota-bold-italic';
+    margin-left: 10px;
+    font-size: 25px;
+    position: relative;
+    top: 11px;
+    text-decoration: none;
+    color: #306091;
+    text-shadow: #8f8f8f 0.2px 0.2px 0px;
+}
+
+.logo a:hover
+{
+    color: #4485c7;
+}
+
+nav
+{
+    float: right;
+    right: 5px;
+    top: -5px;
+    position: absolute;
+    margin: 10px;
+}
+
+nav a
+{
+    position: relative;
+    color: #306091;
+    text-decoration: none;
+    font-size: 17px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+nav a:hover
+{
+    color: #4485c7;
+    border-bottom: 5px solid #ff9900;
+}
+
+#display_name
+{
+    font-size: 20px;
+    font-family: 'quicksand-bold';
+    position: relative;
+    top: -8px;
+}
+
+.wrapper
+{
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+    padding: 10px 10px 0 10px;
+    width: 75%;
+    min-width: 950px;
+}
+
+.column
+{
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px #dfdfdf;
+    z-index: -1;
+}
+
+.user_details
+{
+    width: 270px;
+    float: left;
+    margin-bottom: 50px;
+}
+
+.user_details img
+{
+    border-radius: 5px;
+    height: 125px;
+}
+
+.column a
+{
+    text-decoration: none;
+    color:#3e8cda;
+}
+
+.user_details_left_right
+{
+    width: 125px;
+    display: inline-block;
+    position: absolute;
+    margin-left: 10px;
+    line-height: 20px;
+}
+
+.main_column
+{
+    float: right;
+    width: 68%;
+    z-index: -1;
+    min-height: 160px;
+}
+
+.post_form
+{
+    width: 100%;
+}
+
+.post_form textarea
+{
+    font-family: 'quicksand-light';
+    width: 85%;
+    height: 90px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: 1px solid #dfdfdf;
+    font-size: 12px;
+    padding: 5px;
+}
+
+/* This removes blue focus border from text box; I kind of like it there, so going to keep it for the moment
+textarea:focus
+{
+    outline: 0;
+}
+*/
+
+.post_form input[type = "submit"]
+{
+    width: 9.5%;
+    height: 90px;
+    border: none;
+    border-right: 3px solid #306091;
+    border-bottom: 3px solid #306091;
+    border-radius: 5px;
+    background-color: #4aa3e4;
+    font-family: 'quicksand-bold';
+    color: #ffffff;
+    text-shadow: #8f8f8f 0.2px 0.2px 0px;
+    font-size: 90%;
+    position: absolute;
+    outline: 0;
+    margin: 0;
+}
+
+.post_form input[type = "submit"]:active
+{
+    padding: 5px 4px; /*This is supposed to give the effect of the button being pushed in; not showing currently
+    and I think it has to do with width percentages that keep the width the same regardless of the change */
+    color: #4485c7;
+    border-right: 0.5px solid #306091;
+    border-bottom: 0.5px solid #306091;
+}
+
+.status_post
+{
+    width: 96%;
+    font-size: 15px;
+    padding: 10px 5px;
+    min-height: 75px;
+    cursor: pointer;
+}
+
+.post_profile_pic
+{
+    float: left;
+    margin-right: 7px;
+}
+
+.post_profile_pic img
+{
+    border-radius: 5px;
+}
+
+#comment_iframe
+{
+    max-height: 350px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.comment_section
+{
+    padding: 0 5px 5px 5px;
+    font-family: 'quicksand-light';
+}
+
+.comment_section img
+{
+    margin: 0 3px 3px 3px;
+    border-radius: 3px;
+}
+
+#comment_form textarea
+{
+    border-color: #d3d3d3;
+    width: 85%;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 3px 3px 3px 5px;
+    font-family: 'quicksand-light';
+}
+
+#comment_form input[type = "submit"]
+{
+    border: none;
+    border-right: 2px solid #306091;
+    border-bottom: 2px solid #306091;
+    background-color: #4aa3e4;
+    font-family: 'quicksand-bold';
+    color: #ffffff;
+    text-shadow: #8f8f8f 0.2px 0.2px 0px;
+    border-radius: 5px;
+    width: 13%;
+    height: 35px;
+    margin-top: 3px;
+    position: absolute;
+    /*font-family: 'bellota-bold-italic';*/
+}
+
+#comment_form input[type = "submit"]:active
+{
+    color: #4485c7;
+    border-right: 0.3px solid #306091;
+    border-bottom: 0.3px solid #306091;
+}
+
+.newsfeedPostOptions
+{
+    padding: 0px;
+    text-decoration: none;
+    color: #969494;
+    border: none;
+    font-family: 'quicksand-light';
+}
+
+/*Scrollbar for comment section*/
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #c9c9c9; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b4b4b4;
+  }
+
+  .newsfeedPostOptions iframe
+  {
+    border: 0px;
+    height: 17px;
+    width: 120px;
+  }
+
+  .comment_like
+  {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    color: #3498db;
+    padding: 0;
+    height: auto;
+    width: auto;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .like_value
+  {
+    display: inline;
+    font-size: 14px;
+  }
+
+  .profile_left
+  {
+    top: -10px;
+    /*width: -webkit-fill-available;*/
+    /*width: 17px;*/
+    max-width: 240px;
+    min-width: 130px;
+    height: 100%;
+    float: left;
+    position: relative;
+    background-color: #4aa3e4;
+    border-right: 5px solid #3a80b3;
+    border-top: 5px solid #3a80b3;
+    color: #306091;
+    margin-right: 20px;
+    position: fixed;
+    top: 50px;
+    z-index: 1;
+  }
+
+  .profile_left img
+  {
+    min-width: 80px;
+    width: 80%;
+    margin: 20px;
+    border: 5px solid #3a80b3;
+    border-radius: 100px;
+  }
+
+  .profile_info
+  {
+    display: list-item;
+    background-color: #438cd6;
+    width: 100%;
+    padding: 10px 0 10px 0;
+  }
+
+  .profile_info p
+  {
+      margin: 0 0 0 20px;
+      word-wrap: break-word;
+  }
+
+  .danger
+  {
+      background-color: #e74c3c;
+  }
+
+  .warning
+  {
+      background-color: #f0ad4e;
+  }
+
+  .default
+  {
+      background-color: #dbc3c7;
+  }
+  
+  .success
+  {
+      background-color: #2ecc71;
+  }
+
+  .info
+  {
+      background-color: #3498db;
+  }
+
+  .deep_blue
+  {
+      background-color: #0043f0;
+  }
+
+  .profile_left input[type="submit"]
+  {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 7px 0 0 12px;
+    border: none;
+    color: #fff;
+    font-family: 'quicksand-light';
+    cursor: pointer;
+  }
+
+  #accept_button
+  {
+    width: 20%;
+    height: 28px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    color: #ffffff;
+    background-color: #2ecc71;
+    font-family: 'quicksand-light';
+  }
+
+  #ignore_button
+  {
+    width: 20%;
+    height: 28px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+    color: #ffffff;
+    background-color: #e74c3c;
+    font-family: 'quicksand-light';
+  }
+
+  .delete_button
+  {
+    height: 20px;
+    width: 20px;
+    padding: 0;
+    float: right;
+    border-radius: 4px;
+    border: none;
+    right: -15px;
+    background-color: #dbdfe9;
+    border-color: #c5cbda;
+  }
+  
+  .delete_button:hover
+  {
+    background-color: #b6bac4;
+  }
+
+  .profile_main_column
+  {
+      min-width: 675px;
+      float: left;
+      width: 70%;
+      z-index: 1;
+      position: relative;
+      left: 255px;
+  }
+
+  .profile_info_bottom
+  {
+      margin: 10 0 0 7px;
+      padding-left: 30px;
+      padding-top: 10px;
+  }
+  
